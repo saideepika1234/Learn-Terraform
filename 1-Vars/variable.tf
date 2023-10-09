@@ -39,3 +39,16 @@ variable "sample_dictionary"{
 }
 
 #dictionary is more preferable than list when declaring the data.
+
+variable "auto_num1"{}
+#auto is the keyword
+
+output "auto_num1"{
+    value = var.auto_num1
+}
+
+variable "sample1"{}
+
+output "sample1"{
+    value = var.sample1
+}
