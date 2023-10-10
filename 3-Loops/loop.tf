@@ -4,11 +4,14 @@ resource "null_resouce" "null"{
 
 variable "fruits"{
     default = ["apple", "banana","mango"]
-    provisioner "local_exec" {
-        command = ${var.fruits[count.index]}
-    }
+
 }
 
 resource "null_resouce" "fruits"{
     count = length(var.fruits)
+
+    provisioner "local_exec" {
+        command = ${var.fruits[count.index]}
+    }
+    
 }
