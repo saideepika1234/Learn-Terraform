@@ -12,3 +12,7 @@ data "aws_security_group" "single"{
 output single_sg {
     value= data.aws_security_group.single.id
 }
+
+data "aws_security_group" "selected" {
+  name = "allow-all"
+}
